@@ -24,13 +24,15 @@ public class Cont_Principal extends javax.swing.JFrame {
     public Cont_Principal() {
         initComponents();
 
+       initComponents();
+
         mainpanel = new JPanel();
         mainpanel.setLayout(new java.awt.BorderLayout());
 
         setContentPane(mainpanel);
 
-        cambiarPantalla(new Inicio(this)); // 👈 pantalla inicial
-    
+        cambiarPantalla(new Inicio(this));
+
         pack();
         setLocationRelativeTo(null);
     }
