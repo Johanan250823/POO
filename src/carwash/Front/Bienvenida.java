@@ -54,14 +54,14 @@ public class Bienvenida extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(132, 132, 132)
                 .addComponent(jLabel1)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(124, 124, 124)
                 .addComponent(jLabel1)
-                .addContainerGap(427, Short.MAX_VALUE))
+                .addContainerGap(399, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -186,7 +186,7 @@ public class Catalogo extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Titulo", "Descripcion", "Precio", "Estado"
+                "Titulo", "Descripcion", "Precio (S/)", "Estado"
             }
         ) {
             Class[] types = new Class [] {
@@ -208,7 +208,7 @@ public class Catalogo extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

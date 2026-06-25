@@ -111,7 +111,7 @@
                   <Component id="jPanel1" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -270,7 +270,7 @@
               <Table columnCount="4" rowCount="6">
                 <Column editable="true" title="Titulo" type="java.lang.Object"/>
                 <Column editable="true" title="Descripcion" type="java.lang.Object"/>
-                <Column editable="true" title="Precio" type="java.lang.Double"/>
+                <Column editable="true" title="Precio (S/)" type="java.lang.Double"/>
                 <Column editable="true" title="Estado" type="java.lang.Object"/>
               </Table>
             </Property>
