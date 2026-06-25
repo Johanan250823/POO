@@ -4,15 +4,18 @@
  */
 package Clases;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Usuario
  */
-public class Personas {
+public class Persona {
     
+    public int DNI;
     public String Nombre;
     public String Apellido;
-    public int Edad;
+    public LocalDate  Fecha_Nacimiento;
     public String Correo;
     public String Contraseña;
     

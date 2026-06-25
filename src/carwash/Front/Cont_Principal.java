@@ -4,6 +4,8 @@
  */
 package carwash.Front;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Usuario
@@ -15,15 +17,73 @@ public class Cont_Principal extends javax.swing.JFrame {
     /**
      * Creates new form Cont_Principal
      */
-    
-    public static final String CARD_LOGIN = "Login";
-
+    public Inicio Inicio;
+    public Registro registro;
+    private JPanel mainpanel;
     
     public Cont_Principal() {
         initComponents();
-        setExtendedState(this.MAXIMIZED_BOTH); // para Poner PANTALLA COMPLETA.
-    }
 
+        mainpanel = new JPanel();
+        mainpanel.setLayout(new java.awt.BorderLayout());
+
+        setContentPane(mainpanel);
+
+        cambiarPantalla(new Inicio(this)); // 👈 pantalla inicial
+    
+        pack();
+        setLocationRelativeTo(null);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   public void mostrarRegistro() {
+
+    // Crea una nueva instancia del panel Registro
+    registro = new Registro();
+
+    // Limpia todo lo que haya actualmente en el panel principal
+    mainpanel.removeAll();
+
+    // Agrega el panel Registro al centro del contenedor principal
+    mainpanel.add(registro, java.awt.BorderLayout.CENTER);
+
+    // Recalcula el diseño del panel para que se ordene correctamente
+    mainpanel.revalidate();
+
+    // Refresca la pantalla para que se vea el cambio
+    mainpanel.repaint();
+}
+
+public void cambiarPantalla(JPanel panel) {
+
+    // Elimina cualquier pantalla que esté actualmente en el contenedor
+    mainpanel.removeAll();
+
+    // Agrega el panel recibido como parámetro al centro del contenedor
+    mainpanel.add(panel, java.awt.BorderLayout.CENTER);
+
+    // Recalcula el layout del contenedor
+    mainpanel.revalidate();
+
+    // Refresca la interfaz gráfica
+    mainpanel.repaint();
+
+    // Ajusta el tamaño del JFrame al tamaño preferido del panel actual
+    pack();
+
+    // Centra la ventana en la pantalla
+    setLocationRelativeTo(null);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
