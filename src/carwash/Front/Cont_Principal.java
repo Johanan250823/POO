@@ -48,22 +48,19 @@ public class Cont_Principal extends javax.swing.JFrame {
     
    public void mostrarRegistro() {
 
-    // Crea una nueva instancia del panel Registro
-    registro = new Registro();
+     registro = new Registro(this);
 
-    // Limpia todo lo que haya actualmente en el panel principal
     mainpanel.removeAll();
-
-    // Agrega el panel Registro al centro del contenedor principal
     mainpanel.add(registro, java.awt.BorderLayout.CENTER);
 
-    // Recalcula el diseño del panel para que se ordene correctamente
     mainpanel.revalidate();
-
-    // Refresca la pantalla para que se vea el cambio
     mainpanel.repaint();
 }
 
+   
+   
+   
+   
 public void cambiarPantalla(JPanel panel) {
 
     // Elimina cualquier pantalla que esté actualmente en el contenedor

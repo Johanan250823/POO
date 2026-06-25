@@ -4,6 +4,9 @@
  */
 package carwash.Front;
 
+import carwash.Front.Admin.Admin_Principal;
+import carwash.Front.Clientes.Cliente_Principal;
+
 /**
  *
  * @author Usuario
@@ -13,9 +16,20 @@ public class Bienvenida extends javax.swing.JPanel {
     /**
      * Creates new form Bienvenida
      */
-    public Bienvenida() {
+    public Admin_Principal admin_Principal;    
+    public Cliente_Principal cliente_Principal;
+
+    public Bienvenida( Admin_Principal admin_Principal) {
         initComponents();
+        this.admin_Principal = admin_Principal;
+        
     }
+    public Bienvenida( Cliente_Principal cliente_Principal) {
+        initComponents();
+        this.cliente_Principal = cliente_Principal;
+        
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,11 +44,11 @@ public class Bienvenida extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 609, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 381, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package carwash.Front.Admin;
+import carwash.Front.Bienvenida;
+import javax.swing.JPanel;
+
 
 /**
  *
@@ -15,9 +18,38 @@ public class Admin_Principal extends javax.swing.JFrame {
     /**
      * Creates new form Admin_Principal
      */
+    private JPanel mainpanel;
+    
     public Admin_Principal() {
         initComponents();
+
+        mainpanel = new JPanel();
+        mainpanel.setLayout(new java.awt.BorderLayout());
+
+        setContentPane(mainpanel);
+
+        cambiarPantalla(new Bienvenida(this));
     }
+    public void cambiarPantalla(JPanel panel) {
+
+    // Elimina cualquier pantalla que esté actualmente en el contenedor
+    mainpanel.removeAll();
+
+    // Agrega el panel recibido como parámetro al centro del contenedor
+    mainpanel.add(panel, java.awt.BorderLayout.CENTER);
+
+    // Recalcula el layout del contenedor
+    mainpanel.revalidate();
+
+    // Refresca la interfaz gráfica
+    mainpanel.repaint();
+
+    // Ajusta el tamaño del JFrame al tamaño preferido del panel actual
+    pack();
+
+    // Centra la ventana en la pantalla
+    setLocationRelativeTo(null);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

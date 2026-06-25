@@ -4,6 +4,9 @@
  */
 package carwash.Front;
 
+import carwash.Front.Admin.Admin_Principal;
+import carwash.Front.Clientes.Cliente_Principal;
+
 /**
  *
  * @author Usuario
@@ -189,10 +192,33 @@ public class Inicio extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String Correo = jTXTCorreo.getText();
+        String contraseña = String.valueOf(jPasswordField1.getPassword());
+        
+        if (Correo.equals("Admin") && contraseña.equals("1234")) {
+
+            Admin_Principal Admin = new Admin_Principal();
+            Admin.setVisible(true);
+
+            javax.swing.SwingUtilities.getWindowAncestor(this).dispose();
+            
+            
+        }
+        else if (Correo.equals("cliente") && contraseña.equals("1234")){
+            
+            Cliente_Principal cliente = new Cliente_Principal();
+            cliente.setVisible(true);
+
+            javax.swing.SwingUtilities.getWindowAncestor(this).dispose();
+            
+            
+        }
+        
+            
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void JlinRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JlinRegistroMouseClicked
-      frame.cambiarPantalla(new Registro());
+      frame.cambiarPantalla(new Registro(frame));
 
     }//GEN-LAST:event_JlinRegistroMouseClicked
     
