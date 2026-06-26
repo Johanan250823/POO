@@ -4,6 +4,9 @@
  */
 package carwash.Front.Clientes;
 
+import carwash.Front.Bienvenida;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Usuario
@@ -17,8 +20,24 @@ public class Cliente_Principal extends javax.swing.JFrame {
      */
     public Cliente_Principal() {
         initComponents();
-    }
+        panelContenedor.setLayout(new java.awt.BorderLayout());
 
+        cambiarPantalla(new Bienvenida(this));
+        setLocationRelativeTo(null);
+    }
+     public void cambiarPantalla(JPanel panel) {
+
+        panel.setSize(panelContenedor.getWidth(), panelContenedor.getHeight());
+        panel.setLocation(0, 0);
+
+        panel.setSize(panelContenedor.getWidth(), panelContenedor.getHeight());
+        panel.setLocation(0, 0);
+        
+        panelContenedor.removeAll();
+        panelContenedor.add(panel, java.awt.BorderLayout.CENTER);
+        panelContenedor.revalidate();
+        panelContenedor.repaint();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,21 +47,147 @@ public class Cliente_Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        panelMenu = new javax.swing.JPanel();
+        jLBLInicio = new javax.swing.JLabel();
+        JLBLCatalogo = new javax.swing.JLabel();
+        JLBLReservarCita = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        panelContenedor = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        panelMenu.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLBLInicio.setText("Inicio");
+        jLBLInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLBLInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLBLInicioMouseClicked(evt);
+            }
+        });
+
+        JLBLCatalogo.setText("Catalogo");
+        JLBLCatalogo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLBLCatalogo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JLBLCatalogoMouseClicked(evt);
+            }
+        });
+
+        JLBLReservarCita.setText("Reservar Cita");
+        JLBLReservarCita.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLBLReservarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JLBLReservarCitaMouseClicked(evt);
+            }
+        });
+
+        jLabel7.setForeground(java.awt.Color.red);
+        jLabel7.setText("Cerrar Seccion");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carro sin fondo.png"))); // NOI18N
+
+        javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
+        panelMenu.setLayout(panelMenuLayout);
+        panelMenuLayout.setHorizontalGroup(
+            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(panelMenuLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JLBLReservarCita)
+                            .addComponent(jLBLInicio)
+                            .addComponent(JLBLCatalogo)
+                            .addGroup(panelMenuLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel7)))
+                        .addGap(0, 24, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        panelMenuLayout.setVerticalGroup(
+            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addComponent(jLBLInicio)
+                .addGap(33, 33, 33)
+                .addComponent(JLBLCatalogo)
+                .addGap(34, 34, 34)
+                .addComponent(JLBLReservarCita)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(52, 52, 52))
+        );
+
+        panelContenedor.setBackground(new java.awt.Color(0, 0, 0));
+        panelContenedor.setPreferredSize(new java.awt.Dimension(550, 616));
+
+        javax.swing.GroupLayout panelContenedorLayout = new javax.swing.GroupLayout(panelContenedor);
+        panelContenedor.setLayout(panelContenedorLayout);
+        panelContenedorLayout.setHorizontalGroup(
+            panelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 550, Short.MAX_VALUE)
+        );
+        panelContenedorLayout.setVerticalGroup(
+            panelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(panelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLBLInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBLInicioMouseClicked
+        // TODO add your handling code here:
+        cambiarPantalla(new Bienvenida(this));
+    }//GEN-LAST:event_jLBLInicioMouseClicked
+
+    private void JLBLCatalogoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBLCatalogoMouseClicked
+        // TODO add your handling code here:
+        cambiarPantalla(new Catalogo());
+    }//GEN-LAST:event_JLBLCatalogoMouseClicked
+
+    private void JLBLReservarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBLReservarCitaMouseClicked
+        // TODO add your handling code here:
+
+        cambiarPantalla(new Reserva_Citas());
+    }//GEN-LAST:event_JLBLReservarCitaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -70,5 +215,13 @@ public class Cliente_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JLBLCatalogo;
+    private javax.swing.JLabel JLBLReservarCita;
+    private javax.swing.JLabel jLBLInicio;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel panelContenedor;
+    private javax.swing.JPanel panelMenu;
     // End of variables declaration//GEN-END:variables
 }
