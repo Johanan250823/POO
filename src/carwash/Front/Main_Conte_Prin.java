@@ -10,18 +10,18 @@ import javax.swing.JPanel;
  *
  * @author Usuario
  */
-public class Cont_Principal extends javax.swing.JFrame {
+public class Main_Conte_Prin extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Cont_Principal.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Main_Conte_Prin.class.getName());
 
     /**
-     * Creates new form Cont_Principal
+     * Creates new form Main_Conte_Prin
      */
     public Inicio Inicio;
     public Registro registro;
     private JPanel mainpanel;
     
-    public Cont_Principal() {
+    public Main_Conte_Prin() {
         initComponents();
 
        initComponents();
@@ -130,7 +130,7 @@ public void cambiarPantalla(JPanel panel) {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Cont_Principal().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Main_Conte_Prin().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

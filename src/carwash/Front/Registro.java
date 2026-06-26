@@ -13,8 +13,8 @@ public class Registro extends javax.swing.JPanel {
     /**
      * Creates new form Registro
      */
-     private Cont_Principal frame;
-    public Registro(Cont_Principal frame) {
+     private Main_Conte_Prin frame;
+    public Registro(Main_Conte_Prin frame) {
         initComponents();
         this.frame= frame;
     }

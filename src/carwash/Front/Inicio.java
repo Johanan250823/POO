@@ -16,8 +16,8 @@ public class Inicio extends javax.swing.JPanel {
     /**
      * Creates new form Inicio
      */
-    private Cont_Principal frame;
-    public Inicio(Cont_Principal frame) {
+    private Main_Conte_Prin frame;
+    public Inicio(Main_Conte_Prin frame) {
         this.frame = frame;
         initComponents();
        
