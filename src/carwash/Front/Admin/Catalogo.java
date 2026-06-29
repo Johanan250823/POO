@@ -101,7 +101,6 @@ public class Catalogo extends javax.swing.JPanel {
 
         jMenu3.setText("jMenu3");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tabla De Edicion Catalogo"));
 
         jLabel1.setText("Titulo");
