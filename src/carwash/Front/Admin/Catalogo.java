@@ -34,6 +34,9 @@ public class Catalogo extends javax.swing.JPanel {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -101,9 +104,15 @@ public class Catalogo extends javax.swing.JPanel {
 
         jMenu3.setText("jMenu3");
 
+        jMenu4.setText("File");
+        jMenuBar2.add(jMenu4);
+
+        jMenu5.setText("Edit");
+        jMenuBar2.add(jMenu5);
+
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tabla De Edicion Catalogo"));
 
-        jLabel1.setText("Titulo");
+        jLabel1.setText("Servicio");
 
         jLabel2.setText("Descripcion");
 
@@ -185,7 +194,7 @@ public class Catalogo extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Titulo", "Descripcion", "Precio (S/)", "Estado"
+                "Servicio", "Descripcion", "Precio (S/)", "Estado"
             }
         ) {
             Class[] types = new Class [] {
@@ -237,7 +246,10 @@ public class Catalogo extends javax.swing.JPanel {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

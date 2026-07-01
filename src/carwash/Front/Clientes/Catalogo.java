@@ -28,6 +28,10 @@ public class Catalogo extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setLayout(null);
 
@@ -48,7 +52,7 @@ public class Catalogo extends javax.swing.JPanel {
         jSeparator1.setMaximumSize(new java.awt.Dimension(32767, 300));
         jSeparator1.setMinimumSize(new java.awt.Dimension(5000, 1000));
         add(jSeparator1);
-        jSeparator1.setBounds(20, 60, 89, 10);
+        jSeparator1.setBounds(20, 60, 100, 3);
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 0));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -56,6 +60,30 @@ public class Catalogo extends javax.swing.JPanel {
         jLabel3.setText("4Citas activas");
         add(jLabel3);
         jLabel3.setBounds(440, 70, 90, 16);
+
+        jTextField1.setText("jTextField1");
+        add(jTextField1);
+        jTextField1.setBounds(40, 100, 140, 22);
+
+        jLabel4.setText("🔍");
+        add(jLabel4);
+        jLabel4.setBounds(20, 100, 20, 20);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Servicio", "Descripcion", "Precio", "Accion"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        add(jScrollPane1);
+        jScrollPane1.setBounds(20, 140, 500, 402);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -63,6 +91,10 @@ public class Catalogo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package carwash.Front.Clientes;
-
+import  carwash.Front.Main_Conte_Prin;
 import carwash.Front.Bienvenida;
 import javax.swing.JPanel;
 
@@ -52,7 +52,7 @@ public class Cliente_Principal extends javax.swing.JFrame {
         jLBLInicio = new javax.swing.JLabel();
         JLBLCatalogo = new javax.swing.JLabel();
         JLBLReservarCita = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        JLblCerrarSecCli = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         panelContenedor = new javax.swing.JPanel();
 
@@ -86,9 +86,14 @@ public class Cliente_Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setForeground(java.awt.Color.red);
-        jLabel7.setText("Cerrar Seccion");
-        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLblCerrarSecCli.setForeground(java.awt.Color.red);
+        JLblCerrarSecCli.setText("Cerrar Seccion");
+        JLblCerrarSecCli.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLblCerrarSecCli.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JLblCerrarSecCliMouseClicked(evt);
+            }
+        });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carro sin fondo.png"))); // NOI18N
@@ -110,7 +115,7 @@ public class Cliente_Principal extends javax.swing.JFrame {
                             .addComponent(JLBLCatalogo)
                             .addGroup(panelMenuLayout.createSequentialGroup()
                                 .addGap(1, 1, 1)
-                                .addComponent(jLabel7)))
+                                .addComponent(JLblCerrarSecCli)))
                         .addGap(0, 24, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -125,7 +130,7 @@ public class Cliente_Principal extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addComponent(JLBLReservarCita)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
-                .addComponent(jLabel7)
+                .addComponent(JLblCerrarSecCli)
                 .addGap(52, 52, 52))
         );
 
@@ -189,6 +194,13 @@ public class Cliente_Principal extends javax.swing.JFrame {
         cambiarPantalla(new Reserva_Citas());
     }//GEN-LAST:event_JLBLReservarCitaMouseClicked
 
+    private void JLblCerrarSecCliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLblCerrarSecCliMouseClicked
+        // TODO add your handling code here:
+         Main_Conte_Prin ventana = new Main_Conte_Prin();
+        ventana.setVisible(true);
+        this.dispose(); // Cierra Admin_Principal
+    }//GEN-LAST:event_JLblCerrarSecCliMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -217,9 +229,9 @@ public class Cliente_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JLBLCatalogo;
     private javax.swing.JLabel JLBLReservarCita;
+    private javax.swing.JLabel JLblCerrarSecCli;
     private javax.swing.JLabel jLBLInicio;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel panelContenedor;
     private javax.swing.JPanel panelMenu;

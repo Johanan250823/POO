@@ -1,6 +1,8 @@
 
 package carwash.Front.Admin;
 import carwash.Front.Bienvenida;
+import carwash.Front.Main_Conte_Prin;
+import carwash.Front.Main_Conte_Prin;
 import javax.swing.JPanel;
 
 
@@ -25,7 +27,7 @@ public class Admin_Principal extends javax.swing.JFrame {
     
     public void cambiarPantalla(JPanel panel) {
 
-        panel.setSize(panelContenedor.getWidth(), panelContenedor.getHeight());
+       panel.setSize(panelContenedor.getWidth(), panelContenedor.getHeight());
         panel.setLocation(0, 0);
 
         panel.setSize(panelContenedor.getWidth(), panelContenedor.getHeight());
@@ -61,7 +63,7 @@ public class Admin_Principal extends javax.swing.JFrame {
         JLBLInventari = new javax.swing.JLabel();
         JBLEmpleados = new javax.swing.JLabel();
         JBLDashboard = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        JLblCerrarSec = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         panelContenedor = new javax.swing.JPanel();
 
@@ -119,9 +121,14 @@ public class Admin_Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setForeground(java.awt.Color.red);
-        jLabel7.setText("Cerrar Seccion");
-        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLblCerrarSec.setForeground(java.awt.Color.red);
+        JLblCerrarSec.setText("Cerrar Seccion");
+        JLblCerrarSec.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JLblCerrarSec.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JLblCerrarSecMouseClicked(evt);
+            }
+        });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carro sin fondo.png"))); // NOI18N
@@ -147,7 +154,7 @@ public class Admin_Principal extends javax.swing.JFrame {
                             .addComponent(JLBLCatalogo)
                             .addGroup(panelMenuLayout.createSequentialGroup()
                                 .addGap(1, 1, 1)
-                                .addComponent(jLabel7)))
+                                .addComponent(JLblCerrarSec)))
                         .addGap(0, 24, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -168,7 +175,7 @@ public class Admin_Principal extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addComponent(JBLDashboard)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addComponent(jLabel7)
+                .addComponent(JLblCerrarSec)
                 .addGap(52, 52, 52))
         );
 
@@ -262,6 +269,12 @@ public class Admin_Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_JBLDashboardMouseClicked
 
+    private void JLblCerrarSecMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLblCerrarSecMouseClicked
+        Main_Conte_Prin ventana = new Main_Conte_Prin();
+        ventana.setVisible(true);
+        this.dispose(); // Cierra Admin_Principal
+    }//GEN-LAST:event_JLblCerrarSecMouseClicked
+
     
     
     
@@ -319,9 +332,9 @@ public class Admin_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel JLBLCatalogo;
     private javax.swing.JLabel JLBLInventari;
     private javax.swing.JLabel JLBLReservarCita;
+    private javax.swing.JLabel JLblCerrarSec;
     private javax.swing.JLabel jLBLInicio;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel panelContenedor;
     private javax.swing.JPanel panelMenu;
